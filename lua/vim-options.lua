@@ -44,5 +44,6 @@ vim.keymap.set("n", "<C-f>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "G", "Gzz")
+vim.keymap.set("n","gg","<leader>b")
 vim.wo.number = true
 vim.opt.termguicolors = true
