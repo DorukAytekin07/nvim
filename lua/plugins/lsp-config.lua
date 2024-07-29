@@ -1,4 +1,3 @@
---BUG: python lsp is not working properly when we install pygame
 return {
   {
     "williamboman/mason.nvim",
@@ -15,7 +14,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "pyright", "clangd" },
+        ensure_installed = { "lua_ls", "clangd" , "pyright" },
       })
     end,
   },
@@ -38,33 +37,33 @@ return {
         capabilities = capabilities
       })
 
-      lspconfig.texlab.setup({
+      --[[lspconfig.texlab.setup({
         capabilities = capabilities
-      })
+      })--]]
 
-      lspconfig.jdtls.setup({
+      --[[lspconfig.jdtls.setup({
         capabilities = capabilities
-      })
+      })--]]
 
-      lspconfig.html.setup({
+      --[[lspconfig.html.setup({
         capabilities = capabilities
-      })
+      })--]]
 
-      lspconfig.htmx.setup({
+      --[[lspconfig.htmx.setup({
         capabilities = capabilities
-      })
+      })--]]
 
-      lspconfig.cssls.setup({
+      --[[lspconfig.cssls.setup({
         capabilities = capabilities
-      })
+      })--]]
 
-      lspconfig.tsserver.setup({
+      --[[lspconfig.tsserver.setup({
         capabilities = capabilities
-      })
+      })--]]
 
-      lspconfig.gopls.setup({
+      --[[lspconfig.gopls.setup({
         capabilities = capabilities
-      })
+      })--]]
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "C", vim.lsp.buf.code_action, {})

@@ -6,6 +6,14 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set nowrap")
 vim.cmd("set relativenumber")
+vim.cmd("noremap r d")
+vim.cmd("noremap rr dd")
+vim.cmd("noremap a h")
+vim.cmd("noremap s k")
+vim.cmd("noremap d j")
+vim.cmd("noremap f l")
+
+
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 --UndoTree Persisten History
@@ -44,6 +52,6 @@ vim.keymap.set("n", "<C-f>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "G", "Gzz")
-vim.keymap.set("n","gg","<leader>b")
+vim.keymap.set("n", "gg", "<leader>b")
 vim.wo.number = true
 vim.opt.termguicolors = true
