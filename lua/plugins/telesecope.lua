@@ -4,6 +4,8 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-file-browser.nvim",
+      'nvim-telescope/telescope-media-files.nvim',
+      'nvim-lua/popup.nvim'
     },
     pickers = {
       colorscheme = {
@@ -32,9 +34,17 @@ return {
           ["ui-select"] = {
             require("telescope.themes").get_dropdown({}),
           },
+          media_files = {
+            -- filetypes whitelist
+            -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+            filetypes = { "png", "webp", "jpg", "jpeg" },
+            -- find command (defaults to `fd`)
+            find_cmd = "rg"
+          }
         },
       })
       require("telescope").load_extension("ui-select")
+      require('telescope').load_extension('media_files')
     end,
   },
 }

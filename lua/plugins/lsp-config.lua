@@ -29,9 +29,13 @@ return {
         capabilities = capabilities
       })
 
-      lspconfig.pyright.setup({
+      lspconfig.pylsp.setup({
         capabilities = capabilities
       })
+
+      --[[lspconfig.pyright.setup({
+        capabilities = capabilities
+      })--]]
 
       lspconfig.clangd.setup({
         capabilities = capabilities
@@ -45,19 +49,23 @@ return {
         capabilities = capabilities
       })--]]
 
-      --[[lspconfig.html.setup({
+      lspconfig.html.setup({
         capabilities = capabilities
-      })--]]
+      })
 
       --[[lspconfig.htmx.setup({
         capabilities = capabilities
       })--]]
 
-      --[[lspconfig.cssls.setup({
+      lspconfig.cssls.setup({
         capabilities = capabilities
-      })--]]
+      })
 
-      --[[lspconfig.tsserver.setup({
+      lspconfig.tsserver.setup({
+        capabilities = capabilities
+      })
+
+     --[[ lspconfig.ast_grep.setup({
         capabilities = capabilities
       })--]]
 

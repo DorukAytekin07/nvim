@@ -16,6 +16,11 @@ vim.cmd("noremap f l")
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
+--Useful Shortcuts
+vim.keymap.set("n", "<C-s>", ":w<CR>")
+vim.keymap.set("n", "<C-x>", ":wqa<CR>")
+
+
 --UndoTree Persisten History
 vim.opt.swapfile = false
 vim.opt.backup = false
