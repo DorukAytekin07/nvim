@@ -12,9 +12,7 @@ return {
         null_ls.builtins.diagnostics.mypy,
         null_ls.builtins.diagnostics.ruff,
 
-
         null_ls.builtins.formatting.google_java_format,
-        null_ls.builtins.formatting.latexindent,
         null_ls.builtins.formatting.prettier,
 
       },

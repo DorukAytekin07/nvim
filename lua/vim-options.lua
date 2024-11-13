@@ -1,5 +1,9 @@
 vim.g.mapleader = " "
 --vim.o.guicursor ="c:block,n-v-i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+vim.wo.number = true
+vim.opt.termguicolors = true
+
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
@@ -58,5 +62,3 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("n", "gg", "<leader>b")
-vim.wo.number = true
-vim.opt.termguicolors = true

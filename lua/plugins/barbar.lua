@@ -48,8 +48,8 @@ return {
         icons = {
             -- Configure the base icons on the bufferline.
             -- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
-            buffer_index = false,
-            buffer_number = false,
+            buffer_index = true,
+            buffer_number = true,
             button = '',
             -- Enables / disables diagnostic symbols
             diagnostics = {
@@ -66,7 +66,7 @@ return {
             filetype = {
                 -- Sets the icon's highlight group.
                 -- If false, will use nvim-web-devicons colors
-                custom_colors = false,
+                custom_colors = true,
 
                 -- Requires `nvim-web-devicons` if `true`
                 enabled = true,
