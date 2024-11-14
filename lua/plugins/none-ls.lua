@@ -10,11 +10,13 @@ return {
         --Python Setup
         null_ls.builtins.formatting.black,
         null_ls.builtins.diagnostics.mypy,
-        null_ls.builtins.diagnostics.ruff,
+        --null_ls.builtins.diagnostics.ruff,
 
         null_ls.builtins.formatting.google_java_format,
-        null_ls.builtins.formatting.prettier,
 
+        --TS/JS Setup
+        null_ls.builtins.formatting.prettier,
+        --require("none-ls.diagnostics.eslint"),
       },
     })
     vim.keymap.set("n", "<C-a>", vim.lsp.buf.format, {})
