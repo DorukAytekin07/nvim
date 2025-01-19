@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 --vim.o.guicursor ="c:block,n-v-i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 vim.wo.number = true
 vim.opt.termguicolors = true
@@ -10,12 +11,37 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set nowrap")
 vim.cmd("set relativenumber")
+vim.cmd("set conceallevel=1")
+vim.cmd("let g:tex_conceal='abdmg'")
 vim.cmd("noremap r d")
 vim.cmd("noremap rr dd")
 vim.cmd("noremap a h")
 vim.cmd("noremap s k")
 vim.cmd("noremap d j")
 vim.cmd("noremap f l")
+
+--Nord Theme Config
+vim.g.nord_contrast = true
+vim.g.nord_borders = true
+vim.g.nord_disable_background = false
+vim.g.nord_italic = false
+vim.g.nord_uniform_diff_background = true
+vim.g.nord_bold = true
+
+--Some Useful Insert Mode Bindings
+
+--Navigate
+vim.cmd("inoremap <C-a> <Left>")
+vim.cmd("inoremap <C-s> <Up>")
+vim.cmd("inoremap <C-d> <Down>")
+vim.cmd("inoremap <C-f> <Right>")
+
+
+--Save 
+vim.cmd("inoremap <F3> <c-o>:w<cr>")
+
+--Undo Redo Not Working
+vim.cmd("inoremap <C-u> <c-o>:u<cr>")
 
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)

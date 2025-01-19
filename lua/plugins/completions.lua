@@ -8,13 +8,21 @@ return {
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
     },
+
   },
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
+    },
+    opts = function(_, opts)
+      opts.formatting = {
+        format = require("tailwindcss-colorizer-cmp").formatter,
+      }
+    end,
     config = function()
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
-
       cmp.setup({
         snippet = {
           expand = function(args)
